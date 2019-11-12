@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.2.5.16.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="aa">
+			<button v-on:click="counter +=1">aad 1</button>
+			<p> 这是{{counter}}个按钮</p>
+			<button v-on:click="great">Great</button>
+			<br />
+			<!-- 内联处理器中的方法 -->
+			<h1>内联处理器中的方法</h1>
+			<button v-on:click="say('hi')">say hi</button>
+			<button v-on:click="say('what')">say what</button>
+		</div>
+		<script type="text/javascript">
+			var abc=new Vue({
+				el:"#aa",
+				data:{
+
+					counter:0,
+					name:'hello'
+				},
+				// 调用方法名称
+				methods:{
+					great:function(event){
+						alert('hello'+this.name+'!')
+						if(event){
+							alert(event.target.tagName)
+						}
+					},
+					//内联处理器中的方法
+					 say:function(aa){
+						 alert(aa)
+					 }
+				}
+			})
+		</script>
+	</body>
+</html>

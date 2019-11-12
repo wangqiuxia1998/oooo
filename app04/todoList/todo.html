@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.2.5.16.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="aa">
+			<input v-model="aa"/>
+			<button @click="btn">提交</button>
+			<p v-for="(item,index) of list" :key="index">
+				{{item}}
+			</p>
+		</div>
+		<script>
+			new Vue({
+				el:"#aa",
+				data:{
+					aa:"",
+					list:[
+						
+					]
+				},
+				methods:{
+					btn(){
+						this.list.push(this.aa),
+						this.aa=''
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

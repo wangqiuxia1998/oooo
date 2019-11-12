@@ -1,0 +1,60 @@
+{
+	"status": true,
+	"code": 200,
+	"message": "操作成功",
+	"data": [{
+		"id": "e96e016251764a9daa153601a9f4d88f",
+		"updateTime": "2019-08-03 15:54:35",
+		"createTime": "2019-08-02 09:20:49",
+		"createuserId": "1",
+		"name": "管理员",
+		"description": "管理所有设备",
+		"system": null,
+		"enabled": null
+	}, {
+		"id": "2",
+		"updateTime": "2019-08-02 09:21:11",
+		"createTime": "2019-08-02 09:21:11",
+		"createuserId": "1",
+		"name": "预览用户",
+		"description": "",
+		"system": null,
+		"enabled": null
+	}, {
+		"id": "3d629570cdcf4257a5be99202115c5c2",
+		"updateTime": "2019-08-03 09:54:45",
+		"createTime": "2019-08-03 09:26:40",
+		"createuserId": "1",
+		"name": "角色一",
+		"description": "25656",
+		"system": null,
+		"enabled": null
+	}, {
+		"id": "71c10431b3ce4003850839233a6d1f78",
+		"updateTime": "2019-08-03 09:27:39",
+		"createTime": "2019-08-03 09:27:39",
+		"createuserId": "1",
+		"name": "角色二",
+		"description": "",
+		"system": null,
+		"enabled": null
+	}, {
+		"id": "b58dba22282a49ab9bd4259a8c409a89",
+		"updateTime": "2019-08-03 10:01:01",
+		"createTime": "2019-08-03 10:01:01",
+		"createuserId": "1",
+		"name": "gust用户",
+		"description": "1123",
+		"system": null,
+		"enabled": null
+	}, {
+		"id": "999ec5e01b1b43fe93410d6b2ffab6c8",
+		"updateTime": "2019-08-03 10:02:21",
+		"createTime": "2019-08-03 10:02:21",
+		"createuserId": "1",
+		"name": "角色三",
+		"description": "包含所有",
+		"system": null,
+		"enabled": null
+	}]
+}

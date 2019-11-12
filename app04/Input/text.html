@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.2.5.16.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="bb">
+			<input type="checkbox" id="ac" value="ni" v-model="checkedNames">
+			<label for="ni">ni</label>
+			<input type="checkbox" id="jo" value="jo" v-model="checkedNames">
+			<label for="jo">jo</label>
+			<input type="checkbox" id="ne" value="ne" v-model="checkedNames">
+			<label for="ne">ne</label>
+			<span>名字是：{{checkedNames}}</span>
+			<br />
+			<select v-model="selected" multiple style="width: 50px;">
+			<option>A</option>
+			<option>B</option>
+			<option>C</option>
+			</select>
+			 <span>你想选择的是: {{ selected }}</span>
+			 <br />
+			 <br />
+			 <select v-model="selected1">
+				 <option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+			 </select>
+			 <span>名字1：{{selected1}}</span>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#bb",
+				data:{
+					checkedNames:[],
+					 selected: [],
+					 selected1:'A',
+					 options:[
+						 {text:'One',value:'A'},
+						 {text:'Two',value:'B'},
+						 {text:'Three',value:'C'},
+						 ]
+				}
+			})
+			
+		</script>
+	</body>
+</html>

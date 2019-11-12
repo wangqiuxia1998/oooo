@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../vue.2.5.16.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{aa}}<br />
+			<span v-bind:title="abc">你可以查看状态哦</span>
+			<p v-if="seen">你好啊</p>
+			<!-- v-for的使用渲染 -->
+			<ul>
+				<li v-for="a in lists">
+					{{a.text}}
+				</li>
+			</ul>
+			<p>
+				{{aa}}
+			</p>
+			<button v-on:click="reverseMessage">反转消息</button>
+			<input v-model="aa" />
+		</div>
+		<script type="text/javascript">
+			
+			var app=new Vue({
+				el:"#app",
+				data:{
+					aa:'bbaaaa',
+					abc:'页面加载于'+new Date().toLocaleString(),
+					seen:true,
+					lists:[
+						{text:"抹茶冰淇淋"},
+						{text:"巧克力冰淇淋"},
+						{text:"蓝莓冰淇淋"}
+						]
+				},
+				methods:{
+					reverseMessage:function(){
+						this.aa=this.aa.split('').reverse().join('')
+					}
+				}
+				
+			})
+			// app.seen = false
+			// 自我添加东西
+			app.lists.push({ text: '新项目' })
+		</script>
+	</body>
+</html>

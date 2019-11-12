@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.2.5.16.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="bb">
+				<input v-model="input"/>
+				<button type="button" @click="btn">提交</button>
+				<vc 
+				v-for="(item,index) of items" 
+				:key="index"
+				:content="item"
+				:index="index"
+				@delete="deletes"
+				> </vc>
+		</div>
+		<script type="text/javascript">
+			
+			Vue.component('vc',{
+				props:["content","index"],
+				template:"<h1 @click='bb'>{{content}}</h1>",
+				methods:{
+					bb:function(){
+						// 通知父组件   事件 值
+						this.$emit('delete',this.index)
+					}
+				}
+			})
+			new Vue({
+				el:"#bb",
+				data:{
+					input:"11",
+					items:[]
+				},
+				methods:{
+					btn(){
+						this.items.push(this.input),
+						this.input=''
+					},
+					deletes(index){
+						this.items.splice(index,1)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
